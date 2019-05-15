@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :folders
-      resources :users, only: [:index]
+      resources :users, only: [:index, :show]
       resources :folder_pictures, only: [:create, :destroy]
 
       get '/pictures/search', to: 'pictures#get_pictures_from_api'
