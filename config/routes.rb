@@ -3,9 +3,10 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :folders
+      resources :folders, only: [:show, :create]
       resources :users, only: [:index, :show]
       resources :folder_pictures, only: [:create, :destroy]
+      resources :pictures, only: [:create]
 
       get '/pictures/search', to: 'pictures#get_pictures_from_api'
     end
