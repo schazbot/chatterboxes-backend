@@ -7,5 +7,8 @@ class Api::V1::PicturesController < ApplicationController
         render json: response
     end
 
+    def create
+        picture = Picture.create(text:params[:text], url:params[:url])
+    end
 
 end
