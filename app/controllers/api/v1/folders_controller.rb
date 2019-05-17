@@ -6,8 +6,8 @@ class Api::V1::FoldersController < ApplicationController
     end
 
     def create
-    folder = Folder.create(name: params[:name], user_id:"1")
-    
+        folder = Folder.create(name: params[:name],  user_id:"1", image_url: params[:image_url])
+        render json: folder
     end
 
 end

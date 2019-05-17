@@ -8,6 +8,7 @@ class UserSerializer < ActiveModel::Serializer
       {
         id: folder.id,
         name: folder.name,
+        image: folder.image_url,
         pictures: folder.pictures.map do |p|
           {
             id: p.id,
