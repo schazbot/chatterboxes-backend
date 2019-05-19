@@ -5,10 +5,15 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :folders, only: [:show, :create]
       resources :users, only: [:index, :show]
-      resources :folder_pictures, only: [:create, :destroy]
-      resources :pictures, only: [:create]
+      resources :folder_pictures, only: [:index, :create, :destroy]
 
       get '/pictures/search', to: 'pictures#get_pictures_from_api'
+      get '/pictures', to: 'pictures#index'
+      post '/pictures/create', to: 'pictures#create'
+
+      get 'folder_pictures', to: 'folder_pictures#index'
+      post 'folder_pictures/create', to: 'folder_pictures#create'
+
     end
   end
 end
