@@ -16,4 +16,20 @@ class Api::V1::PicturesController < ApplicationController
         picture = Picture.create(text:params[:text], url:params[:url])
     end
 
+    def update
+        picture = Picture.find(params[:id])
+        picture.update(picture_params)
+        render json: picture
+    end
+
+    
+    
+      private
+    
+      def picture_params
+          params.require(:picture).permit(:text, :url)
+      end
+
+
+
 end
