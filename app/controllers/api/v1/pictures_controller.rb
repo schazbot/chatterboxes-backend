@@ -12,9 +12,10 @@ class Api::V1::PicturesController < ApplicationController
     end
     
     def create
-        
-        picture = Picture.create(text:params[:text], url:params[:url])
-        render json: picture
+        pic = Picture.create(text:params[:text], url:params[:url])
+
+        FolderPicture.create(folder_id: params[:folder_id], picture_id: pic.id)
+        render json: pic
     end
 
     def update
