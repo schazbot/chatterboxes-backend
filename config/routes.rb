@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
       get '/pictures/search', to: 'pictures#get_pictures_from_api'
       # get '/pictures', to: 'pictures#index'
-      # post '/pictures/create', to: 'pictures#create'
+      post '/pictures/create', to: 'pictures#create'
       # patch '/pictures/update', to: 'pictures#update'
 
 
