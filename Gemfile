@@ -22,6 +22,8 @@ gem 'puma', '~> 3.11'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'seed_dump'
+
 gem 'active_model_serializers'
 gem 'rest-client'
 
