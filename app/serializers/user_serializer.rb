@@ -1,14 +1,15 @@
 class UserSerializer < ActiveModel::Serializer
   # has_many :pictures, through: :folders
 
-  attributes :id, :folders
+  attributes :id
+  has_many :folders
 
   def folders
     object.folders.map do |folder|
       {
         id: folder.id,
         name: folder.name,
-        image: folder.image_url,
+        image_url: folder.image_url,
         pictures: folder.pictures.map do |p|
           {
             id: p.id,
