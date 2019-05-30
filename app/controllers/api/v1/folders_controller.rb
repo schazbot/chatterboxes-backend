@@ -11,8 +11,16 @@ class Api::V1::FoldersController < ApplicationController
     end
 
     def create
-        folder = Folder.create(name: params[:name],  user_id:"1", image_url: params[:image_url])
-        render json: folder
+        
+        folder = Folder.create(name: params[:name],  
+        user_id:"1", 
+        image_url: params[:image_url] === "" ? "http://cdn.osxdaily.com/wp-content/uploads/2017/10/folder-ios-files-app.jpg" : params[:image_url])
+
+            if folder.valid?
+                render json: folder
+            else
+                render json: {error: folder.errors.full_messages}
+            end 
     end
 
     def update
