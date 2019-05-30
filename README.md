@@ -1,24 +1,37 @@
-# README
+# Chatterboxes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### An Alternative and Augmentative Communication (AAC) tool giving a voice to those that may not have one.
+Make sentences using symbols to enforce language aqcuisition, and press speak to hear your sentence!
 
-Things you may want to cover:
+*LIVE SITE ->  https://chatterboxes-ff906.web.app/
 
-* Ruby version
+*VIDEO DEMO -> https://vimeo.com/338432555
 
-* System dependencies
 
-* Configuration
+## Collaborating - getting started
 
-* Database creation
+Fork and clone the repo
 
-* Database initialization
+For the frontend of this project, go to https://github.com/schazbot/chatterboxes-frontend and follow the getting started instructions!
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ruby on Rails for the backend API
+Semantic UI for styling --- https://react.semantic-ui.com/
+Open Symbols API for free AAC symbols --- https://www.opensymbols.org/
 
-* Deployment instructions
 
-* ...
+
+### In the project directory run:
+
+`bundle install` 
+to bundle... then
+
+`rails -s`
+To run the app in the development mode.
+
+Open http://localhost:3000 to view it in the browser.
+
+
+### Author
+**Charlotte Pearce** [GitHub](https://github.com/schazbot)
